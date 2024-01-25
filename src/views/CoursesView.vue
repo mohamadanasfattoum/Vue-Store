@@ -1,13 +1,15 @@
 
 <template>
-  <h3>Courses Page</h3>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3">
+        <CourseFilter />
+      </div>
+      <div class="col-lg-9">
+        <CourseList />
+      </div>
 
-  <div>
-    <CourseFilter />
-  </div>
-
-  <div>
-    <CourseList />
+    </div>
   </div>
 
 </template>
