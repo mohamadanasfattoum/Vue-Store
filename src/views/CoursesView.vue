@@ -3,10 +3,10 @@
   <div class="container py-5">
     <div class="row">
       <div class="col-lg-3">
-        <CourseFilter />
+        <CourseFilter @category-updated="filterCourse" />
       </div>
       <div class="col-lg-9">
-        <CourseList :courses = 'courses' />
+        <CourseList :courses = 'filteredCourses' />
       </div>
 
     </div>
@@ -30,7 +30,14 @@
     },
     data(){
       return {
-        courses : courses
+        courses : courses,
+        filteredCourses : courses
+      }
+    },
+    methods:{
+      filterCourse(selectedCategory){
+        this.filteredCourses = this.courses.filter(course =>selectedCategory.includes(course.category_id) )
+
       }
     }
   }

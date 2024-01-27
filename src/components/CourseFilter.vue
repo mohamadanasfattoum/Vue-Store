@@ -10,6 +10,7 @@
           :value="cat.id"
           class="form-check-input me-2"
           :id="cat.id"
+          v-model="selectedCategory"
           >
           <label :for="cat.id" class="form-label">{{ cat.name }}</label>
         </div>
@@ -30,7 +31,13 @@
           {id:2, name:'Mobile Development'},
           {id:3, name:'AI Development'},
           
-        ]
+        ],
+        selectedCategory: []
+      }
+    },
+    watch:{
+      selectedCategory(){
+        this.$emit('category-updated', this.selectedCategory)
       }
     }
   }
