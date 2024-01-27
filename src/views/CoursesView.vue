@@ -6,7 +6,7 @@
         <CourseFilter />
       </div>
       <div class="col-lg-9">
-        <CourseList />
+        <CourseList :courses = 'courses' />
       </div>
 
     </div>
@@ -19,12 +19,19 @@
 
   import CourseList from '@/components/CourseList.vue';
   import CourseFilter from '@/components/CourseFilter.vue';
+  import { courses } from '../tem-data'
+
 
   export default {
     name: 'CoursesPage',
     components: {
       CourseList,
       CourseFilter
+    },
+    data(){
+      return {
+        courses : courses
+      }
     }
   }
 </script>
