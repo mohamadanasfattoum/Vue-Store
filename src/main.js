@@ -10,10 +10,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
+import 'primevue/resources/themes/aura-light-green/theme.css'
+
+import Button from "primevue/button"
+
+
 const app = createApp(App)
 
 app.use(router)
 
-app.mount('#app')
-
 app.use(PrimeVue);
+
+app.component('Button', Button);
+
+
+app.mount('#app')
