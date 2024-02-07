@@ -5,14 +5,9 @@
     <form>
       <div class="mt-3">
         <label for="" class="my-2">Filter By Category </label>
-        <div v-for="cat in category" :key="cat.id">
-          <input type="checkbox"
-          :value="cat.id"
-          class="form-check-input me-2"
-          :id="cat.id"
-          v-model="selectedCategory"
-          >
-          <label :for="cat.id" class="form-label">{{ cat.name }}</label>
+        <div class="flex align-items-center my-2" v-for="cat in category" :key="cat.id">
+          <Checkbox v-model="selectedCategory" class="me-2 " :inputId="cat.id" name="pizza" :value="cat.id" />
+          <label :for="cat.id" class="ml-2 "> {{ cat.name }} </label>
         </div>
       </div>
     </form>
