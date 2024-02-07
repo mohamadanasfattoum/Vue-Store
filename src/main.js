@@ -10,7 +10,9 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css'
 // import 'bootstrap'
 // import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import 'primevue/resources/themes/aura-light-green/theme.css'
+// import 'primevue/resources/themes/aura-light-green/theme.css'
+import 'primevue/resources/themes/aura-dark-blue/theme.css'
+
 import Button from "primevue/button"
 import 'primeicons/primeicons.css'
 import Menubar from 'primevue/menubar';
